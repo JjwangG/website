@@ -1,0 +1,39 @@
+<div class="nav">
+  <img id="avatar" src="assests/joanna.jpg" />
+  <h2>Joanna Wang</h2>
+  <div id="index" class="nav-item no-bottom-border">
+    <a href="index.html">
+      <p class="nav-text">About Me</p>
+    </a>
+  </div>
+  <div id="projects" class="nav-item no-bottom-border">
+    <a href="projects.html">
+      <p class="nav-text">Projects</p>
+    </a>
+  </div>
+  <div id="secret" class="nav-item">
+    <a href="secret.html">
+      <p class="nav-text">Secret Link</p>
+    </a>
+  </div>
+  <div>
+    <a href="https://www.linkedin.com/in/joanna-wang-937127196" target="_blank"><img class="nav-icon"
+        src="./assests/linkedin.svg" /></a>
+
+    <img class="nav-icon" src="./assests/facebook.svg" />
+    <a href="https://github.com/JjwangG/myWebsite.git" target="_blank"><img class="nav-icon"
+        src="/assests/github.svg" /></a>
+  </div>
+</div>
+<script>
+  const url = window.location.href;
+  const start = url.lastIndexOf("/");
+  const end = url.indexOf(".html");
+  const currentActive = url.slice(start + 1, end);
+  console.log(currentActive);
+  if (currentActive == "") {
+    $(`#index`).addClass("active");
+  } else {
+    $(`#${currentActive}`).addClass("active");
+  }
+</script>
